@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Intensity <= 0.5\nsamples = 300\nvalue = [15, 278, 7]\nclass = Typical aura with migraine", fillcolor="#48e78b"] ;
+1 [label="samples = 15\nvalue = [15, 0, 0]\nclass = Typical aura without migraine", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Character <= 1.5\nsamples = 285\nvalue = [0, 278, 7]\nclass = Typical aura with migraine", fillcolor="#3ee684"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="samples = 275\nvalue = [0, 275, 0]\nclass = Typical aura with migraine", fillcolor="#39e581"] ;
+2 -> 3 ;
+4 [label="Phonophobia <= 0.5\nsamples = 10\nvalue = [0, 3, 7]\nclass = Migraine without aura", fillcolor="#b78ef0"] ;
+2 -> 4 ;
+5 [label="Age <= 50.0\nsamples = 6\nvalue = [0, 3, 3]\nclass = Typical aura with migraine", fillcolor="#ffffff"] ;
+4 -> 5 ;
+6 [label="samples = 4\nvalue = [0, 3, 1]\nclass = Typical aura with migraine", fillcolor="#7beeab"] ;
+5 -> 6 ;
+7 [label="samples = 2\nvalue = [0, 0, 2]\nclass = Migraine without aura", fillcolor="#8139e5"] ;
+5 -> 7 ;
+8 [label="samples = 4\nvalue = [0, 0, 4]\nclass = Migraine without aura", fillcolor="#8139e5"] ;
+4 -> 8 ;
+}
